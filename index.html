@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JESSIE STORE!! - Accesorios</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- CABECERA (HEADER)                          -->
+    <!-- ========================================== -->
+    <header class="header-principal">
+        
+        <!-- Aviso superior -->
+        <div class="anuncio-envio">
+            ✨ JESSIE STORE!! ✨
+        </div>
+
+        <!-- Barra de herramientas (Menú, Buscador y WhatsApp) -->
+        <div class="menu-superior">
+
+            <!-- MENÚ DESPLEGABLE CON BOTÓN DE CLIC -->
+            <div class="dropdown">
+                <button id="btn-menu" class="btn-icono" type="button">☰ Menú</button>
+                <div id="menu-desplegable" class="dropdown-contenido">
+                    <span class="titulo-menu">Disponibles ahora:</span>
+                    <a href="#" onclick="filtrarCategoria('Pulsera'); return false;">Pulseras</a>
+                    <a href="#" onclick="filtrarCategoria('Llavero'); return false;">Llaveros</a>
+                    <hr>
+                    <span class="titulo-menu">Próximamente:</span>
+                    <a href="#" class="proximamente">Collares</a>
+                    <a href="#" class="proximamente">Anillos</a>
+                    <a href="#" class="proximamente">Pines</a>
+                    <a href="#" class="proximamente">Collar para lentes</a>
+                    <hr>
+                    <a href="#" onclick="mostrarTodos(); return false;" style="font-weight: bold; color: #d81b60;">Ver Todo</a>
+                </div>
+            </div>
+
+            <!-- BARRA DE BÚSQUEDA FUNCIONAL -->
+            <div class="caja-busqueda">
+                <input type="text" id="buscador" placeholder="Buscar accesorios..." onkeyup="buscarProductos()">
+                <button class="btn-icono" type="button">🔍</button>
+            </div>
+
+            <!-- BOTÓN DE WHATSAPP -->
+            <a href="https://wa.me/0000-0000" target="_blank" class="btn-contacto" title="">
+                
+            </a>
+
+        </div>
+
+       
+
+    </header>
+
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN DE PRODUCTOS (GRID)                -->
+    <!-- ========================================== -->
+    <main class="contenedor-tienda" id="lista-productos">
+
+        <!-- Producto 1 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Stargirl con Estrellas Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.coreano.jpeg" alt="Llavero Stargirl Estrellas">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero 'Stargirl' con Estrellas</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Amarillo con Flores Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.floresamarillas.jpeg" alt="Llavero Amarillo con Flores">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero Amarillo con Flores</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Corazón Amarillo Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.corazonamarillo.jpeg" alt="Llavero Corazón Amarillo">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero Corazón Amarillo</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Corazón Celeste Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.corazonceleste.jpeg" alt="Llavero Corazón Celeste">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero Corazón Celeste</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Corazón Rojo Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.corazonrojo.jpeg" alt="Llavero Corazón Rojo">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero Corazón Rojo</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="tarjeta-producto" data-nombre="Llavero con Piedras Amarillas Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.piedrasamarillas.jpeg" alt="Llavero con Piedras Amarillas">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero con Piedras Amarillas</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="tarjeta-producto" data-nombre="Pulsera Minimalista Pulsera">
+            <div class="contenedor-imagen">
+                <img src="img/PULSERA.caritahilonegro.jpeg" alt="Pulsera Minimalista">
+            </div>
+            <div class="info-producto">
+                <h3>Pulsera Minimalista</h3>
+                <p class="precio">$2.25</p>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="tarjeta-producto" data-nombre="Llavero Personalizado Llavero">
+            <div class="contenedor-imagen">
+                <img src="img/ParaLentes.jpeg" alt="Llavero Personalizado">
+            </div>
+            <div class="info-producto">
+                <h3>Llavero Personalizado</h3>
+                <p class="precio">$3.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="tarjeta-producto" data-nombre="Pulsera de Cerezas Pulsera">
+            <div class="contenedor-imagen">
+                <img src="img/PULSERA.cerezas.jpeg" alt="Pulsera de Cerezas">
+            </div>
+            <div class="info-producto">
+                <h3>Pulsera de Cerezas</h3>
+                <p class="precio">$2.00</p>
+            </div>
+        </div>
+
+       
+
+        <!-- Producto 10 -->
+        <div class="tarjeta-producto" data-nombre="Accesorio Black Style">
+            <div class="contenedor-imagen">
+                <img src="img/LLAVERO.compartidos.jpeg" alt="Accesorio 10">
+            </div>
+            <div class="info-producto">
+                <h3>Accesorio Black Style</h3>
+                <p class="precio">$2.50</p>
+            </div>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="tarjeta-producto" data-nombre="Pulsera Especial">
+            <div class="contenedor-imagen">
+                <img src="img/PULSERA.pink.jpeg" alt="Accesorio 11">
+            </div>
+            <div class="info-producto">
+                <h3>Pulsera Especial</h3>
+                <p class="precio">$3.00</p>
+            </div>
+        </div>
+
+
+        <!-- Producto 12 -->
+        <div class="tarjeta-producto" data-nombre="Accesorio Estrellas">
+            <div class="contenedor-imagen">
+                <!-- Nota: Evita espacios en nombres de imágenes si puedes, o asegúrate de que coincida -->
+                <img src="img/LLAVERO.coreapinnk.jpeg" alt="Accesorio 12">
+            </div>
+            <div class="info-producto">
+                <h3>Accesorio Estrellas</h3>
+                <p class="precio">$2.50</p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <!-- ========================================== -->
+    <!-- CÓDIGO DE INTERACTIVIDAD INTEGRADO         -->
+    <!-- ========================================== -->
+
+
+
+
+
+
+    <script>
+        // 1. Menú desplegable
+        const btnMenu = document.getElementById('btn-menu');
+        const menuDesplegable = document.getElementById('menu-desplegable');
+
+        btnMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuDesplegable.classList.toggle('mostrar');
+        });
+
+        window.addEventListener('click', () => {
+            if (menuDesplegable.classList.contains('mostrar')) {
+                menuDesplegable.classList.remove('mostrar');
+            }
+        });
+
+        // 2. Buscador en tiempo real
+        function buscarProductos() {
+            let input = document.getElementById('buscador').value.toLowerCase();
+            let tarjetas = document.getElementsByClassName('tarjeta-producto');
+
+            for (let i = 0; i < tarjetas.length; i++) {
+                let nombre = tarjetas[i].getAttribute('data-nombre').toLowerCase();
+                if (nombre.includes(input)) {
+                    tarjetas[i].style.display = "block";
+                } else {
+                    tarjetas[i].style.display = "none";
+                }
+            }
+        }
+
+        // 3. Filtrar por categoría
+        function filtrarCategoria(categoria) {
+            let tarjetas = document.getElementsByClassName('tarjeta-producto');
+
+            for (let i = 0; i < tarjetas.length; i++) {
+                let nombre = tarjetas[i].getAttribute('data-nombre');
+                if (nombre.includes(categoria)) {
+                    tarjetas[i].style.display = "block";
+                } else {
+                    tarjetas[i].style.display = "none";
+                }
+            }
+        }
+
+        // 4. Mostrar todos
+        function mostrarTodos() {
+            let tarjetas = document.getElementsByClassName('tarjeta-producto');
+            for (let i = 0; i < tarjetas.length; i++) {
+                tarjetas[i].style.display = "block";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
